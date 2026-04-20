@@ -224,13 +224,13 @@ h2, h3 {
     left: 20px;
     width: 60px; /* Collapsed width */
     height: 94vh; /* Cách dưới 3% (100 - 3 - 3 = 94) */
-    background: rgba(10, 20, 50, 0.7);
+    background: rgba(255, 255, 255, 0.85); /* Nền trắng mờ */
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
+    border: 1px solid rgba(139, 0, 0, 0.1);
+    border-right: 2px solid #8b0000;
     z-index: 1000;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
+    display: none !important; /* Tạm ẩn Sidebar */
     flex-direction: column;
     padding: 20px 0;
     overflow: hidden;
@@ -257,9 +257,9 @@ h2, h3 {
     display: block;
     width: 25px;
     height: 3px;
-    background: white;
+    background: #8b0000 !important; /* Cưỡng chế Hamburger màu đỏ */
     border-radius: 3px;
-    margin: 0 auto;
+    margin: 4px auto;
     transition: all 0.3s ease;
 }
 
@@ -294,10 +294,11 @@ h2, h3 {
     gap: 20px;
     padding: 12px 15px;
     border-radius: 15px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #8b0000 !important; /* Cưỡng chế màu đỏ cho toàn bộ icon và chữ */
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
+    font-weight: 700; /* Làm số đậm lên cho dễ nhìn */
 }
 
 .sidebar-item i {
@@ -319,13 +320,21 @@ h2, h3 {
 }
 
 .sidebar-item:hover, .sidebar-item.active {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgba(139, 0, 0, 0.05);
+    color: #8b0000;
 }
 
 .sidebar-item.active {
-    background: var(--accent-blue);
-    box-shadow: 0 0 15px var(--glow-blue);
+    background: #8b0000 !important;
+    color: white !important;
+    border-radius: 50%; /* Làm nút active tròn trịa hơn */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
 }
 
 /* Main content adjustment when sidebar is present */
@@ -1275,4 +1284,28 @@ h2, h3 {
     opacity: 1;
     transform: translateX(0);
     transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+    100% { transform: translateX(100%); }
+}
+
+/* SCALE AND FADE TRANSITION 3 */
+body {
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease-out;
+    transform-origin: center center;
+}
+
+body.page-enter {
+    animation: scaleFadeIn 0.5s forwards cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+body.page-exit {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+@keyframes scaleFadeIn {
+    0% { transform: scale(1.1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }

@@ -3,303 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 2</title>
+    <title>Slide 1.1 - Nguồn gốc Tư bản</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="../../assets/sidebar.js" defer></script>
-    <style>
-        .timeline-snake-container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-            padding: 1vh 2vw;
-            left: 20px;
-        }
-
-        /* Dọc trung tâm */
-        .timeline-spine {
-            position: absolute;
-            left: 50%;
-            top: 5vh;
-            bottom: 5vh;
-            width: 1px;
-            border-left: 1px dashed rgba(255, 255, 255, 0.4);
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-
-        .snake-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 2vh;
-            position: relative;
-            z-index: 2;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
-        }
-
-        .snake-row.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* 3 Cột */
-        .snake-col-side {
-            width: 45%;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .snake-node-wrap {
-            width: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        /* Hộp nội dung */
-        .snake-content {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-
-        /* Node trung tâm */
-        .snake-circle {
-            width: 70px;
-            height: 70px;
-            background: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 3;
-            box-shadow: 0 0 30px rgba(58, 134, 255, 0.4);
-            border: 4px solid #3a86ff;
-        }
-
-        .snake-circle i {
-            font-size: 1.6rem;
-            color: #3a86ff;
-        }
-
-        /* Số thứ tự (Pill) */
-        .snake-number-pill {
-            background: #4a54c2; /* Màu xanh đậm theo mẫu */
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border: 2px solid rgba(255,255,255,0.2);
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Đường kẻ nối ngang (Dashed) */
-        .horizontal-dash {
-            flex: 1;
-            height: 1px;
-            border-top: 2px dashed rgba(255, 255, 255, 0.3);
-            margin: 0 10px;
-        }
-
-        /* Detail styling */
-        .snake-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #3a86ff;
-            text-transform: uppercase;
-            font-weight: 900;
-        }
-
-        .snake-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .snake-content li {
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            position: relative;
-            padding-left: 20px;
-            color: white;
-        }
-
-        .snake-content li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #3a86ff;
-        }
-
-        .snake-footer {
-            position: fixed;
-            bottom: 2vh;
-            right: 3vw;
-            font-style: italic;
-            opacity: 0.6;
-            font-size: 1rem;
-            color: white;
-            z-index: 99;
-        }
-    </style>
 </head>
-<body style="background: url('../../BackgroundPNG/slide2.png') center/cover no-repeat;">
-    <div class="slide-container" style="background: transparent; justify-content: flex-start;">
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 8vw; gap: 5vw;">
         
-        <h1 class="title-huge" style="font-size: 2.2rem; margin-top: 2vh; margin-bottom: 0; text-align: center; width: 100%;">Bối cảnh để đặt ra vấn đề</h1>
-        
-        <div class="timeline-snake-container">
-            <div class="timeline-spine"></div>
-
-            <!-- Row 01: Vấn đề (Left) - Node - 01 (Right) -->
-            <div class="snake-row">
-                <div class="snake-col-side" style="justify-content: flex-end;">
-                    <div class="snake-content" style="text-align: left;">
-                        <h3>Vấn đề</h3>
-                        <ul>
-                            <li>AI phát triển mạnh</li>
-                            <p>⟶ Gen Z khủng hoảng:</p>
-                                <ul style="margin-left: 20px; font-size: 0.9em; opacity: 0.9;">
-                                    <p>+ Sợ bị thay thế</p>
-                                    <p>+ Mất định hướng</p>
-                                    <p>+ Nghi ngờ giá trị bản thân</p>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="horizontal-dash"></div>
+        <!-- Left Side: Text Content -->
+        <div style="flex: 1.3; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+            <!-- Title (Thống nhất phông chữ) -->
+            <div style="margin-bottom: 5vh; text-align: left;">
+                <div style="font-family: 'Perandory', serif; font-size: 5vw; letter-spacing: 0.15vw; line-height: 1.1;">
+                    NGUỒN GỐC<br>TƯ BẢN
                 </div>
+            </div>
+
+            <!-- Paragraphs -->
+            <div style="font-size: 1.3vw; line-height: 1.6; display: flex; flex-direction: column; gap: 2.5vh; max-width: 95%;">
+                <p style="margin: 0;">Theo học thuyết của C.Mác, tiền sẽ biến thành tư bản khi nó được sử dụng để mang lại giá trị thặng dư (Ngô Tuấn Nghĩa 2019, tr. 54)</p>
+                <p style="margin: 0;">Tiền trong nền sản xuất hàng hóa giản đơn vận động trong quan hệ H - T - H.</p>
+                <p style="margin: 0;">Ngược lại, nền sản xuất tư bản chủ nghĩa theo công thức T-H-T nhưng tư bản là T-H-T' với mục đích không phải để tiêu dùng, mà để kiếm thêm tiền</p>
                 
-                <div class="snake-node-wrap">
-                    <div class="snake-circle">
-                        <i class="fas fa-user-astronaut"></i>
-                    </div>
-                </div>
-
-                <div class="snake-col-side" style="justify-content: flex-start;">
-                    <div class="horizontal-dash"></div>
-                    <div class="snake-number-pill">01</div>
-                    <div style="flex: 2;"></div> <!-- Để đẩy pill vào gần node hơn nếu cần -->
+                <div style="margin-top: 2vh; font-weight: 700; display: inline-block;">
+                    <span style="border-bottom: 2px solid #8b0000; padding-bottom: 5px;">Vậy nguồn gốc của giá trị thặng dư là gì?</span>
                 </div>
             </div>
+        </div>
 
-            <!-- Row 02: 02 (Left) - Node - Giải pháp (Right) -->
-            <div class="snake-row">
-                <div class="snake-col-side" style="justify-content: flex-end;">
-                    <div style="flex: 2;"></div>
-                    <div class="snake-number-pill">02</div>
-                    <div class="horizontal-dash"></div>
+        <!-- Right Side: Illustrative Cards -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 4vh; justify-content: center;">
+            <!-- Card 1 -->
+            <div style="background: white; border: 1px solid #2e7d32; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                <div style="background: #2e7d32; color: white; padding: 1.2vh; text-align: center; font-weight: 700; font-size: 1.1vw;">
+                    NỀN SẢN XUẤT HÀNG HÓA GIẢN ĐƠN (H-T-H)
                 </div>
-
-                <div class="snake-node-wrap">
-                    <div class="snake-circle">
-                        <i class="fas fa-users-gear"></i>
-                    </div>
-                </div>
-
-                <div class="snake-col-side" style="justify-content: flex-start;">
-                    <div class="horizontal-dash"></div>
-                    <div class="snake-content" style="text-align: left;">
-                        <h3>Giải pháp</h3>
-                        <ul>
-                            <li>Dùng phép biện chứng duy vật</li>
-                            <li>Nhìn AI như một quá trình phát triển tất yếu</li>
-                        </ul>
+                <div style="padding: 2.5vh; text-align: center;">
+                    <div style="font-size: 1.4vw; font-weight: 700; color: #333;">HÀNG - TIỀN - HÀNG</div>
+                    <div style="margin-top: 1.5vh; background: #e8f5e9; padding: 1vh 1.5vh; font-size: 0.9vw; border-radius: 5px; color: #2e7d32; font-weight: 600;">
+                        MỤC ĐÍCH: GIÁ TRỊ SỬ DỤNG (TIÊU DÙNG)
                     </div>
                 </div>
             </div>
 
-            <!-- Row 03: 3 QUY LUẬT (Left) - Node - 03 (Right) -->
-            <div class="snake-row">
-                <div class="snake-col-side" style="justify-content: flex-end;">
-                    <div class="snake-content" style="text-align: left;">
-                        <h3>3 QUY LUẬT</h3>
-                        <ul>
-                            <li>Quy luật Lượng ⟶ Chất</li>
-                            <li>Quy luật Đấu tranh - Mâu thuẫn</li>
-                            <li>Quy luật Phủ định của phủ định</li>
-                        </ul>
-                    </div>
-                    <div class="horizontal-dash"></div>
+            <!-- Card 2 -->
+            <div style="background: white; border: 1px solid #c62828; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                <div style="background: #c62828; color: white; padding: 1.2vh; text-align: center; font-weight: 700; font-size: 1.1vw;">
+                    NỀN SẢN XUẤT TƯ BẢN CHỦ NGHĨA (T-H-T')
                 </div>
-
-                <div class="snake-node-wrap">
-                    <div class="snake-circle">
-                        <i class="fas fa-chalkboard-user"></i>
-                    </div>
-                </div>
-
-                <div class="snake-col-side" style="justify-content: flex-start;">
-                    <div class="horizontal-dash"></div>
-                    <div class="snake-number-pill">03</div>
-                    <div style="flex: 2;"></div>
-                </div>
-            </div>
-
-            <!-- Row 04: 04 (Left) - Node - KẾT LUẬN (Right) -->
-            <div class="snake-row">
-                <div class="snake-col-side" style="justify-content: flex-end;">
-                    <div style="flex: 2;"></div>
-                    <div class="snake-number-pill">04</div>
-                    <div class="horizontal-dash"></div>
-                </div>
-
-                <div class="snake-node-wrap">
-                    <div class="snake-circle">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                </div>
-
-                <div class="snake-col-side" style="justify-content: flex-start;">
-                    <div class="horizontal-dash"></div>
-                    <div class="snake-content" style="text-align: left;">
-                        <h3>KẾT LUẬN</h3>
-                        <ul>
-                            <li>Khủng hoảng là một phần tất yếu</li>
-                            <li>Con người không thể bị thay thế</li>
-                            <li>Động lực thúc đẩy phát triển</li>
-                        </ul>
+                <div style="padding: 2.5vh; text-align: center;">
+                    <div style="font-size: 1.4vw; font-weight: 700; color: #333;">TIỀN - HÀNG - TIỀN'</div>
+                    <div style="margin-top: 1.5vh; background: #ffebee; padding: 1vh 1.5vh; font-size: 0.9vw; border-radius: 5px; color: #c62828; font-weight: 600;">
+                        MỤC ĐÍCH: GIÁ TRỊ TĂNG THÊM (KIẾM THÊM TIỀN)
                     </div>
                 </div>
             </div>
-
-            <div class="snake-footer">(Phạm Văn Đức, 2019, Tr. 89)</div>
+            
+            <div style="font-style: italic; opacity: 0.5; font-size: 0.85vw; text-align: right; margin-top: -1vh;">(Mô phỏng sơ đồ phân tích kinh tế)</div>
         </div>
 
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const rows = document.querySelectorAll('.snake-row');
-            rows.forEach((row, index) => {
-                setTimeout(() => {
-                    row.classList.add('animate');
-                }, index * 300);
-            });
-        });
-
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
-                window.location.href = '../Slide1.html';
+                window.transitionToPage('../Slide1.html');
             } else if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.location.href = 'Content01_2.html';
+                window.transitionToPage('Content01_2.html');
             }
+        });
+    </script>
+    <script>
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
         });
     </script>
 </body>

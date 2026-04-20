@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.12 - Khái niệm Bái vật giáo</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .content-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            gap: 5vw;
+            margin-top: 2vh;
+        }
+        .text-section {
+            flex: 1.2;
+            text-align: justify;
+        }
+        .image-section {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+        }
+        .image-frame {
+            border: 2px solid #8b0000;
+            padding: 5px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .image-frame img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .section-header {
+            font-family: 'Perandory', serif;
+            font-size: 2vw;
+            color: #8b0000;
+            margin-bottom: 1.5vh;
+            border-bottom: 1.5px solid rgba(139, 0, 0, 0.3);
+            display: inline-block;
+            padding-bottom: 2px;
+            text-transform: uppercase;
+        }
+        .desc-text {
+            font-size: 1.25vw;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 4vh;
+        }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 8vw;">
+        
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 5vh; margin-top: -3vh;">
+            <div style="font-family: 'Perandory', serif; font-size: 4.5vw; letter-spacing: 0.2vw;">
+                KHÁI NIỆM
+            </div>
+            <div style="width: 50%; height: 2px; background: #8b0000; margin: 1vh auto; opacity: 0.4;"></div>
+        </div>
+
+        <div class="content-container">
+            <!-- Text Content -->
+            <div class="text-section">
+                <div class="section-header">ĐỊNH NGHĨA:</div>
+                <div class="desc-text">
+                    <strong>Bái vật giáo hàng hóa</strong> là một khái niệm trung tâm trong lý luận của C.Mác, mô tả tình trạng các quan hệ xã hội giữa người với người bị che lấp và biểu hiện thành các quan hệ giữa vật với vật (hàng hóa).
+                </div>
+
+                <div class="section-header">VÍ DỤ:</div>
+                <div class="desc-text">
+                    Một chiếc túi xách không còn là vật để đựng đồ (giá trị sử dụng), mà nó "tỏa hào quang" khiến người ta khao khát, tôn sùng nó như một thực thể có quyền năng định vị đẳng cấp.
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="image-section">
+                <div class="image-frame">
+                    <img src="../../BackgroundPNG/thợ làm túi.jpg" alt="Thợ làm túi thủ công">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                window.transitionToPage('Content01_11.html');
+            } else if (e.key === 'ArrowRight' || e.key === ' ') {
+                window.transitionToPage('Content01_13.html');
+            }
+        });
+
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
+        });
+    </script>
+</body>
+</html>

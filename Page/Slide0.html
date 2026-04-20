@@ -8,44 +8,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="slide-container" style="background-image: url('../BackgroundPNG/slide6.png');">
+    <div class="slide-container" style="background: url('../BackgroundPNG/red.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; position: relative;">
         
-        <!-- Header Section -->
-        <header class="header-top" style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding: 40px 100px; position: absolute; top: 0; left: 0;">
-            <div class="logo-area">
-                <img src="../BackgroundPNG/fptu.png" alt="FPT University Logo" style="height: 80px; width: auto; object-fit: contain;">
+        <!-- Four Corners Headers -->
+        <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; padding: 40px 60px; display: flex; flex-direction: column; justify-content: space-between; pointer-events: none;">
+            <!-- Top row -->
+            <div style="display: flex; justify-content: space-between; font-family: 'Open Sauce', 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; color: #fff; letter-spacing: 1px;">
+                <div>MLN122</div>
+                <div>SPRING 2026</div>
             </div>
-
-            <div class="badge-info" style="display: flex; align-items: center; gap: 10px; padding: 12px 30px; background: rgba(10, 20, 50, 0.7); border: 2px solid #3a86ff; box-shadow: 0 0 25px rgba(58, 134, 255, 0.5); border-radius: 12px; backdrop-filter: blur(10px);">
-                <i class="fas fa-briefcase" style="color: #3a86ff; font-size: 1.2rem;"></i>
-                <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 1.5px; font-size: 1.1rem;">MLN111 - GROUP 6</span>
-            </div>
-        </header>
-
-        <!-- Signature -->
-        <div style="text-align: center; z-index: 1; margin-top: 2vh; display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 100vw; padding: 0 20px;">
-            <h1 class="title-huge" style="font-size: 3.8rem; line-height: 1.2; margin: 0; word-wrap: break-word; width: 100%;">BA QUY LUẬT BIỆN CHỨNG<br>TRONG KỶ NGUYÊN AI</h1>
-            <p class="title-sub" style="font-size: 1.8rem; letter-spacing: 0.1em; font-weight: 400; opacity: 1; margin-top: 1.5rem;">VƯỢT QUA KHỦNG HOẢNG BẰNG CÁCH NÀO?</p>
             
-            <div style="margin-top: 2rem; font-family: 'Montserrat', sans-serif; opacity: 0.9;">
-                <p style="font-size: 1.1rem; margin-bottom: 5px;">Giảng viên: HieuNT328</p>
-                <p style="font-size: 1.1rem;">Class: 3W_MLN111_09</p>
+            <!-- Bottom row -->
+            <div style="display: flex; justify-content: space-between; font-family: 'Open Sauce', 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; color: #fff; letter-spacing: 1px;">
+                <div>NHÓM 2 - 3W_MLN122_08</div>
+                <div>GVHD: ANHTH81</div>
             </div>
         </div>
 
-        <!-- Start Button -->
-        <a href="Slide1.html" class="btn-primary" style="margin-top: 4rem; position: relative; bottom: auto; transform: none; left: auto; padding: 24px 60px; font-size: 1.6rem; border-radius: 50px;">Bắt đầu</a>
+        <!-- Center Main Title (Thống nhất phông chữ) -->
+        <div style="position: relative; text-align: center; color: #fff; font-family: 'Perandory', serif; line-height: 1; margin-top: -5vh; width: 100%;">
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 3vw; white-space: nowrap;">
+                <div style="font-size: 15vw; letter-spacing: 0.2vw;">GIÁ TRỊ</div>
+                
+                <!-- The bracketed text -->
+                <div style="font-family: 'Open Sauce', 'Montserrat', sans-serif; font-size: 1.6vw; font-weight: 400; text-align: center; border-left: 0.2vw solid #fff; border-right: 0.2vw solid #fff; padding: 1vh 1.5vw; position: relative; letter-spacing: 0.1vw; line-height: 1.4;">
+                    <div style="position: absolute; top: -0.2vw; left: -0.2vw; width: 1.5vw; height: 0.2vw; background: #fff;"></div>
+                    <div style="position: absolute; top: -0.2vw; right: -0.2vw; width: 1.5vw; height: 0.2vw; background: #fff;"></div>
+                    <div style="position: absolute; bottom: -0.2vw; left: -0.2vw; width: 1.5vw; height: 0.2vw; background: #fff;"></div>
+                    <div style="position: absolute; bottom: -0.2vw; right: -0.2vw; width: 1.5vw; height: 0.2vw; background: #fff;"></div>
+                    
+                    BÍ MẬT CỦA<br>NỀN KINH TẾ<br>TƯ BẢN<br>CHỦ NGHĨA
+                </div>
+            </div>
+
+            <div style="font-size: 16vw; letter-spacing: 0.3vw; margin-top: -2vh;">THẶNG DƯ</div>
+        </div>
 
     </div>
 
-    <!-- Navigation logic will be globally handled later, 
-         for now adding local key listener for testing -->
+    <!-- Navigation logic -->
     <script>
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.location.href = 'Content01/Content01_1.html';
+                window.transitionToPage('Slide0_5.html');
             }
         });
     </script>
+
+    <!-- Transition System -->
+    <script>
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450); 
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
+            // Clean up any old overlays if present
+            let overlays = document.querySelectorAll('.swipe-overlay');
+            overlays.forEach(o => o.remove());
+        });
+    </script>
+
 </body>
 </html>

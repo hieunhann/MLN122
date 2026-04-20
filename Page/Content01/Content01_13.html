@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.13 - Giải thích Bái vật giáo</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .layout-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            gap: 5vw;
+        }
+        .artistic-title {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .content-section {
+            flex: 1.8;
+            padding-right: 4vw;
+        }
+        .point-item {
+            margin-bottom: 4vh;
+        }
+        .point-header {
+            font-family: 'Perandory', serif;
+            font-size: 1.8vw;
+            color: #8b0000;
+            margin-bottom: 1vh;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .point-desc {
+            font-size: 1.25vw;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .point-desc strong {
+            color: #8b0000;
+        }
+        .citation {
+            position: absolute;
+            bottom: 3vh;
+            right: 4vw;
+            font-size: 1vw;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; width: 100vw; height: 100vh; padding: 0 6vw; box-sizing: border-box; align-items: center;">
+        
+        <div class="layout-container">
+            <!-- Left: Artistic Title -->
+            <div class="artistic-title">
+                <div style="font-family: 'Perandory', serif; font-size: 5vw; letter-spacing: 0.3vw; text-align: center;">
+                    GIẢI THÍCH
+                </div>
+                <div style="width: 60%; height: 3px; background: #8b0000; margin-top: 1.5vh; opacity: 0.6;"></div>
+            </div>
+
+            <!-- Right: 3 Points -->
+            <div class="content-section">
+                <div class="point-item">
+                    <div class="point-header">1. SỰ CHE LẤP BẢN CHẤT CỦA GIÁ TRỊ:</div>
+                    <div class="point-desc">
+                        Chỉ <strong>quan tâm đến giá trị</strong> trao đổi và giá cả hàng hóa mà <strong>quên</strong> mất rằng <strong>nguồn gốc</strong> thực sự của giá trị là hao phí sức lao động của con người.
+                    </div>
+                </div>
+
+                <div class="point-item">
+                    <div class="point-header">2. ẢO TƯỞNG "TIỀN ĐẺ RA TIỀN":</div>
+                    <div class="point-desc">
+                        Tiền <strong>không thể tự</strong> "sinh con", ảo tưởng tiền đẻ ra tiền thực chất là sự phủ nhận vai trò của quá trình sản xuất.
+                    </div>
+                </div>
+
+                <div class="point-item">
+                    <div class="point-header">3. SỰ BIẾN TƯỚNG QUA LỢI NHUẬN:</div>
+                    <div class="point-desc">
+                        Việc gọi tên "lợi nhuận" giúp chủ tư bản <strong>che giấu</strong> việc <strong>bóc lột</strong>, khiến người ta <strong>lầm tưởng</strong> máy móc cũng tạo ra tiền chứ không chỉ có công nhân.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="citation">(Ngô Tuấn Nghĩa 2019, tr. 62)</div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                window.transitionToPage('Content01_12.html');
+            } else if (e.key === 'ArrowRight' || e.key === ' ') {
+                window.transitionToPage('Content01_14.html');
+            }
+        });
+
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
+        });
+    </script>
+</body>
+</html>

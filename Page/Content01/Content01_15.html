@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.15 - Hiện tượng Tha hóa lao động</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: center; justify-content: center; text-align: center; padding: 0 5vw;">
+        
+        <!-- Part 1: Hiện tượng (Thống nhất phông chữ) -->
+        <div style="margin-bottom: 2vh; margin-top: -5vh;">
+            <div style="font-family: 'Perandory', serif; font-size: 3.5vw; letter-spacing: 0.3vw; opacity: 0.9;">
+                HIỆN TƯỢNG
+            </div>
+        </div>
+
+        <div style="width: 25%; height: 2px; background: #8b0000; margin: 0 auto 5vh auto; opacity: 0.3;"></div>
+
+        <!-- Part 2: Main Title -->
+        <div style="font-family: 'Perandory', serif; font-size: 7vw; margin-bottom: 1.5vh; letter-spacing: 0.1vw; text-shadow: 0 10px 20px rgba(139,0,0,0.1);">
+            "THA HÓA LAO ĐỘNG"
+        </div>
+
+        <!-- Part 3: Subtitle in English -->
+        <div style="font-family: 'Perandory', serif; font-size: 3.5vw; opacity: 0.8; letter-spacing: 0.15vw;">
+            (ALIENATED LABOR)
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                window.transitionToPage('Content01_14.html');
+            } else if (e.key === 'ArrowRight' || e.key === ' ') {
+                window.transitionToPage('Content01_16.html');
+            }
+        });
+
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
+        });
+    </script>
+</body>
+</html>

@@ -6,71 +6,106 @@
     <title>Slide 1</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-<body style="background-image: url('../BackgroundPNG/slide3.png'); background-size: cover; background-position: center;">
-    <div class="slide-container" style="background: transparent; justify-content: center; padding-top: 0;">
+<body style="background: url('../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000;">
+    <div style="display: flex; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 10vw;">
         
-        <h1 class="title-huge" style="font-size: 8rem; margin-bottom: 8vh; text-align: center;">MỤC LỤC</h1>
-
-        <div class="contents-grid" style="margin: 0 auto; display: grid; grid-template-columns: 420px 420px; gap: 2.5rem 5vw; justify-content: center; transform: translateX(10vw);">
-            <!-- Column 1 -->
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <a href="Content01/Content01_1.html" class="content-item">
-                    <div class="number-box">1</div>
-                    <div class="content-text">Bối cảnh</div>
-                </a>
-                <a href="Content01/Content01_2.html" class="content-item">
-                    <div class="number-box">2</div>
-                    <div class="content-text">Quy luật lượng chất</div>
-                </a>
-                <a href="Content03/Content03_1.html" class="content-item">
-                    <div class="number-box">3</div>
-                    <div class="content-text">Phủ định của phủ định</div>
-                </a>
-                <a href="Content02/Content02_0.html" class="content-item">
-                    <div class="number-box">4</div>
-                    <div class="content-text" style="white-space: nowrap;">Quy luật mâu thuẫn</div>
-                </a>
-                <a href="Content02/Content02_5.html" class="content-item">
-                    <div class="number-box">5</div>
-                    <div class="content-text">Dẫn chứng</div>
-                </a>
+        <!-- Left Title: Nội Dung (Thống nhất phông chữ) -->
+        <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding-right: 8vw;">
+            <div style="font-family: 'Perandory', serif; font-size: 8rem; color: #8b0000; letter-spacing: 0.5rem; text-align: right; line-height: 1.1;">
+                NỘI<br>DUNG
             </div>
+        </div>
 
-            <!-- Column 2 -->
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <a href="Content04/Content04_0.html" class="content-item">
-                    <div class="number-box">6</div>
-                    <div class="content-text">Kết luận bài học</div>
-                </a>
-                <a href="Content04/Content04_1.html" class="content-item">
-                    <div class="number-box">7</div>
-                    <div class="content-text">Q&A</div>
-                </a>
-                <a href="Content05/Content05_1.html" class="content-item">
-                    <div class="number-box">8</div>
-                    <div class="content-text">AI Usage</div>
-                </a>
-                <a href="Content05/Content05_2.html" class="content-item">
-                    <div class="number-box">9</div>
-                    <div class="content-text">Reference</div>
-                </a>
-                <a href="Content06/Content06_1.html" class="content-item">
-                    <div class="number-box">10</div>
-                    <div class="content-text">Cảm ơn</div>
-                </a>
+        <!-- Right Menu: List -->
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding-left: 2vw; border-left: 1px solid rgba(139, 0, 0, 0.1);">
+            <div style="width: 100%; max-width: 500px; font-family: 'Perandory', 'Times New Roman', serif;">
+                
+                <!-- Section Header -->
+                <div style="font-size: 1.5rem; margin-bottom: 15px; letter-spacing: 2px; color: #8b0000; font-weight: bold;">I. GIÁ TRỊ THẶNG DƯ</div>
+                <div style="height: 2px; background: #8b0000; width: 100%; margin-bottom: 10px; opacity: 0.8;"></div>
+
+                <!-- Menu Items: 13 Slides of Content01 -->
+                <style>
+                    .menu-container {
+                        max-height: 55vh;
+                        overflow-y: auto;
+                        padding-right: 10px;
+                    }
+                    .menu-container::-webkit-scrollbar { width: 4px; }
+                    .menu-container::-webkit-scrollbar-thumb { background: #8b0000; border-radius: 10px; }
+                    
+                    .menu-row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-decoration: none;
+                        color: #8b0000;
+                        font-size: 1.2rem;
+                        padding: 10px 0;
+                        border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+                        transition: all 0.2s;
+                        font-weight: 500;
+                    }
+                    .menu-row:hover { 
+                        padding-left: 10px;
+                        background: rgba(139, 0, 0, 0.05);
+                    }
+                    .page-num { font-size: 1rem; opacity: 0.6; font-family: 'Open Sauce', sans-serif; }
+                </style>
+
+                <div class="menu-container">
+                    <a href="Content01/Content01_1.html" class="menu-row"><span>1.1 NGUỒN GỐC TƯ BẢN</span><span class="page-num">01</span></a>
+                    <a href="Content01/Content01_2.html" class="menu-row"><span>1.2 NGUỒN GỐC THẶNG DƯ</span><span class="page-num">02</span></a>
+                    <a href="Content01/Content01_3.html" class="menu-row"><span>1.3 CÁCH THỨC SẢN XUẤT</span><span class="page-num">03</span></a>
+                    <a href="Content01/Content01_4.html" class="menu-row"><span>1.4 QUÁ TRÌNH SẢN XUẤT</span><span class="page-num">04</span></a>
+                    <a href="Content01/Content01_5.html" class="menu-row"><span>1.5 VÍ DỤ MINH HỌA</span><span class="page-num">05</span></a>
+                    <a href="Content01/Content01_6.html" class="menu-row"><span>1.6 BẢN CHẤT GIÁ TRỊ THẶNG DƯ</span><span class="page-num">06</span></a>
+                    <a href="Content01/Content01_7.html" class="menu-row"><span>1.7 PHƯƠNG PHÁP BIẾN ĐỔI</span><span class="page-num">07</span></a>
+                    <a href="Content01/Content01_8.html" class="menu-row"><span>1.8 VÍ DỤ: TUYỆT ĐỐI</span><span class="page-num">08</span></a>
+                    <a href="Content01/Content01_9.html" class="menu-row"><span>1.9 VÍ DỤ: TƯƠNG ĐỐI</span><span class="page-num">09</span></a>
+                    <a href="Content01/Content01_10.html" class="menu-row"><span>1.10 THẶNG DƯ SIÊU NGẠCH</span><span class="page-num">10</span></a>
+                    <a href="Content01/Content01_11.html" class="menu-row"><span>1.11 BÁI VẬT GIÁO</span><span class="page-num">11</span></a>
+                    <a href="Content01/Content01_12.html" class="menu-row"><span>1.12 KHÁI NIỆM BÁI VẬT GIÁO</span><span class="page-num">12</span></a>
+                    <a href="Content01/Content01_13.html" class="menu-row"><span>1.13 GIẢI THÍCH CHI TIẾT</span><span class="page-num">13</span></a>
+                    <a href="Content01/Content01_14.html" class="menu-row"><span>1.14 LIÊN HỆ THỰC TIỄN VN</span><span class="page-num">14</span></a>
+                    <a href="Content01/Content01_15.html" class="menu-row"><span>1.15 THA HÓA LAO ĐỘNG</span><span class="page-num">15</span></a>
+                    <a href="Content01/Content01_16.html" class="menu-row"><span>1.16 KHÁI NIỆM THA HÓA</span><span class="page-num">16</span></a>
+                    <a href="Content01/Content01_17.html" class="menu-row"><span>1.17 THỰC TIỄN THA HÓA VN</span><span class="page-num">17</span></a>
+                    <a href="Content01/Content01_18.html" class="menu-row"><span>1.18 AI USAGE</span><span class="page-num">18</span></a>
+                    <a href="Content01/Content01_19.html" class="menu-row"><span>1.19 TRÍCH DẪN NGUỒN</span><span class="page-num">19</span></a>
+                    <a href="Content01/Content01_20.html" class="menu-row"><span>1.20 THANK YOU</span><span class="page-num">20</span></a>
+                    <a href="Content01/Content01_21.html" class="menu-row"><span>1.21 Q & A SESSION</span><span class="page-num">21</span></a>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <!-- Key Navigation -->
+    <!-- Navigation logic -->
     <script>
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.location.href = 'Content01/Content01_1.html'; // Assuming content starts here
+                window.transitionToPage('Content01_16.html');
             } else if (e.key === 'ArrowLeft') {
-                window.location.href = 'Slide0.html';
+                window.transitionToPage('Slide0_5.html');
             }
+        });
+    </script>
+
+    <!-- Transition System -->
+    <script>
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450); 
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
+            let overlays = document.querySelectorAll('.swipe-overlay');
+            overlays.forEach(o => o.remove());
         });
     </script>
 </body>

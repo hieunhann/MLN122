@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.16 - Khái niệm Tha hóa lao động</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .content-box {
+            width: 100%;
+            max-width: 1000px;
+            text-align: left;
+            margin-top: -5vh;
+        }
+        .main-subtitle {
+            font-size: 2.2vw;
+            color: #8b0000;
+            font-weight: 700;
+            margin-bottom: 3vh;
+        }
+        .desc-paragraph {
+            font-size: 1.3vw;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 5vh;
+            text-align: justify;
+        }
+        .section-title {
+            font-size: 1.8vw;
+            color: #8b0000;
+            font-weight: 700;
+            margin-bottom: 3vh;
+        }
+        .list-items {
+            list-style: none;
+            padding-left: 2vw;
+        }
+        .list-items li {
+            font-size: 1.3vw;
+            margin-bottom: 1.5vh;
+            color: #444;
+            display: flex;
+            align-items: center;
+        }
+        .list-items li::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #8b0000;
+            border-radius: 50%;
+            margin-right: 1.5vw;
+        }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 10vw;">
+        
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 6vh; margin-top: -3vh;">
+            <div style="font-family: 'Perandory', serif; font-size: 4.5vw; letter-spacing: 0.2vw;">
+                KHÁI NIỆM
+            </div>
+            <div style="width: 50%; height: 2px; background: #8b0000; margin: 1vh auto; opacity: 0.3;"></div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-box">
+            <div class="main-subtitle">Tha hóa lao động</div>
+            <div class="desc-paragraph">
+                <strong>Tha hóa lao động:</strong> Là hiện tượng người lao động <b>sản xuất ra sản phẩm</b> để phục vụ cuộc sống nhưng lại <b>được hưởng thụ rất ít</b> từ chính những gì mình làm ra. <b>Sức mạnh sản xuất</b> và <b>sản phẩm làm ra</b> lại <b>đối lập</b> và <b>nô dịch chính họ</b>. <span style="opacity: 0.6; font-size: 1vw;">(Ngọc Bích, 2025)</span>
+            </div>
+
+            <div class="section-title">Bốn hình thái tha hóa lao động theo C.Mác:</div>
+            <ul class="list-items">
+                <li>1. Tha hóa khỏi sản phẩm lao động</li>
+                <li>2. Tha hóa khỏi quá trình lao động</li>
+                <li>3. Tha hóa khỏi bản chất con người</li>
+                <li>4. Tha hóa khỏi đồng loại</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('Content01_15.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('Content01_17.html');
+        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
+    </script>
+</body>
+</html>

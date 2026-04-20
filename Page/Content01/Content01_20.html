@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.20 - Thank You</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; width: 100vw; height: 100vh; align-items: center; justify-content: center; text-align: center;">
+        
+        <div>
+            <div style="font-family: 'Perandory', serif; font-size: 8vw; letter-spacing: 0.5vw;">
+                CẢM ƠN
+            </div>
+            <div style="width: 60%; height: 4px; background: #8b0000; margin: 2vh auto; opacity: 0.6;"></div>
+            <div style="font-size: 1.5vw; opacity: 0.8; letter-spacing: 0.2vw; text-transform: uppercase;">
+                CÔ VÀ CÁC BẠN ĐÃ LẮNG NGHE & THEO DÕI
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('Content01_19.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('Content01_21.html');
+        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
+    </script>
+</body>
+</html>

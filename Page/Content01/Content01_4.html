@@ -3,23 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 5</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-    <script src="../../assets/sidebar.js" defer></script>
+    <title>Slide 1.4 - Quá trình sản xuất thặng dư</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .rect-card {
+            background: #8b0000;
+            color: white;
+            border-radius: 15px;
+            padding: 3vh 3vw;
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+            margin-bottom: 4vh;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .rect-card:hover {
+            transform: scale(1.02);
+        }
+        .icon-circle {
+            background: white;
+            color: #8b0000;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            flex-shrink: 0;
+            /* Đổi viền xanh thành viền đỏ mờ sang trọng */
+            border: 3px solid rgba(139, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .citation {
+            position: absolute;
+            bottom: 4vh;
+            right: 5vw;
+            font-size: 1.1vw;
+            font-style: italic;
+            color: #8b0000;
+            opacity: 0.8;
+        }
+    </style>
 </head>
-<body style="background: url('../../BackgroundPNG/slide3.png') center/cover no-repeat;">
-    <div class="slide-container" style="background: transparent; justify-content: center; align-items: center; padding: 0;">
-        <img src="../../BackgroundPNG/content1_4.PNG" style="width: 85%; height: auto; border-radius: 15px; box-shadow: 0 0 40px rgba(58, 134, 255, 0.3);">
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 10vw;">
+        
+        <!-- Header (Thống nhất phông chữ) -->
+        <div style="text-align: center; margin-bottom: 6vh; margin-top: -5vh;">
+            <div style="font-family: 'Perandory', serif; font-size: 4vw; letter-spacing: 0.15vw;">
+                QUÁ TRÌNH SẢN XUẤT GIÁ TRỊ THẶNG DƯ
+            </div>
+            <!-- Gạch chân đậm hơn -->
+            <div style="width: 70%; height: 3px; background: #8b0000; margin: 2vh auto; border-radius: 2px; opacity: 0.6;"></div>
+        </div>
+
+        <!-- Content Cards -->
+        <div style="width: 100%; max-width: 1100px;">
+            <!-- Card 1 -->
+            <div class="rect-card">
+                <div class="icon-circle">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div style="font-size: 1.4vw; line-height: 1.6;">
+                    Là sự thống nhất giữa quá trình tạo ra giá trị và quá trình làm tăng giá trị, trong đó giá trị thặng dư được tạo ra thông qua việc sử dụng hàng hóa <b>sức lao động</b>.
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rect-card">
+                <div class="icon-circle">
+                    <i class="fas fa-business-time"></i>
+                </div>
+                <div style="font-size: 1.4vw; line-height: 1.6;">
+                    Quá trình sản xuất, lao động được chia thành 2 phần:
+                    <ul style="margin: 1vh 0 0 0; padding-left: 2vw;">
+                        <li><b>Thời gian lao động tất yếu:</b> Tạo ra giá trị = tiền lương.</li>
+                        <li><b>Thời gian lao động thặng dư:</b> Phần ngoài thời gian tất yếu để tạo ra m.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="citation">(Ngô Tuấn Nghĩa 2019, tr. 56-57)</div>
+
     </div>
 
     <script>
-        // Navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
-                window.location.href = 'Content01_3.html';
+                window.transitionToPage('Content01_3.html');
             } else if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.location.href = 'Content01_5.html';
+                window.transitionToPage('Content01_5.html');
             }
+        });
+
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter');
+            document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-enter');
         });
     </script>
 </body>

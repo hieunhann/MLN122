@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.17 - Thực tiễn Việt Nam</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .layout-container {
+            display: flex;
+            width: 100%;
+            gap: 4vw;
+            align-items: center;
+        }
+        .text-side {
+            flex: 1;
+            text-align: justify;
+        }
+        .image-side {
+            flex: 1;
+        }
+        .main-point {
+            font-size: 1.5vw;
+            font-weight: 700;
+            color: #8b0000;
+            margin-bottom: 3vh;
+        }
+        .detail-text {
+            font-size: 1.25vw;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 2vh;
+            padding-left: 20px;
+            border-left: 3px solid #8b0000;
+        }
+        .conclusion-text {
+            font-size: 1.2vw;
+            font-style: italic;
+            color: #8b0000;
+            font-weight: 500;
+            margin-top: 3vh;
+        }
+        .image-frame {
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; padding: 0 8vw; align-items: center; justify-content: center;">
+        
+        <!-- Unified Header -->
+        <div style="text-align: center; margin-bottom: 6vh; margin-top: -3vh;">
+            <div style="font-family: 'Perandory', serif; font-size: 3.5vw; letter-spacing: 0.1vw; text-transform: uppercase;">
+                LIÊN HỆ VỚI THỰC TIỄN VIỆT NAM HIỆN NAY
+            </div>
+            <div style="width: 50%; height: 2px; background: #8b0000; margin: 1vh auto; opacity: 0.3;"></div>
+        </div>
+
+        <div class="layout-container">
+            <!-- Left: Text -->
+            <div class="text-side">
+                <div class="main-point">1. Thực tiễn "Tha hóa lao động" tại Việt Nam</div>
+                <div class="detail-text">
+                    • Thực tế: Nhiều công nhân tại khu công nghiệp phải <b>tăng ca liên tục</b> mới đủ sống, trong khi các vụ đình công xảy ra do tranh chấp lương, thưởng và bảo hiểm.
+                </div>
+                <div class="conclusion-text">
+                    => Điều này cho thấy <b>mâu thuẫn lợi ích ngày càng rõ</b>, phản ánh tình trạng người lao động chưa làm chủ được lao động của mình — biểu hiện điển hình của tha hóa lao động.
+                </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="image-side">
+                <div style="position: relative;">
+                    <img src="../../BackgroundPNG/1.17.png" class="image-frame" alt="Công nhân Việt Nam">
+                    <div style="font-size: 0.9vw; text-align: right; margin-top: 1vh; opacity: 0.7;">(Source: Minh Hương, 2022)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('Content01_16.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('Content01_18.html');
+        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
+    </script>
+</body>
+</html>

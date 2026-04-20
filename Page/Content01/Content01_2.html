@@ -3,64 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 3</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-    <script src="../../assets/sidebar.js" defer></script>
-</head>
-<body style="background: url('../../BackgroundPNG/slide5.png') center/cover no-repeat;">
-    <div class="slide-container" style="background: transparent; justify-content: flex-start;">
+    <title>Slide 1.2 - Nguồn gốc Thặng dư</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --marx-red: #8b1c24;
+            --marx-blue: #6a9bd8;
+            --bg-light: #fcfcfc;
+        }
+        input[type=range] { width: 100%; cursor: pointer; accent-color: #8b0000; }
         
-        <h1 class="title-huge" style="font-size: 3.5rem; margin-top: 8vh; text-align: center; width: 100%;">QUY LUẬT LƯỢNG - CHẤT</h1>
+        .marx-simulator {
+            background-color: var(--bg-light);
+            padding: 2.5vh 2vw;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            color: #333;
+            width: 100%;
+            max-width: 600px; /* Tăng kích thước bảng tính */
+        }
 
-        <div class="comparison-container">
-            <!-- Concept: Chất -->
-            <div class="comparison-item">
-                <div class="glow-icon-circle">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-                <div class="concept-text-box" style="font-size: 1.5rem; line-height: 1.6;">
-                    <strong style="font-size: 1.8rem;">“Chất”</strong> là những đặc điểm khách quan vốn có làm cho sự vật đó là nó chứ không phải là một sự vật khác. Chất được tạo nên từ các yếu tố cấu thành và cách thức liên kết (kết cấu) giữa các yếu tố đó.
-                </div>
-            </div>
+        .marx-simulator h3 {
+            text-align: center;
+            color: var(--marx-red);
+            margin-top: 0;
+            margin-bottom: 2vh;
+            font-size: 1.6vw;
+            text-transform: uppercase;
+        }
 
-            <!-- Concept: Lượng -->
-            <div class="comparison-item">
-                <div class="glow-icon-circle">
-                    <i class="fas fa-gear"></i>
-                </div>
-                <div class="concept-text-box" style="font-size: 1.5rem; line-height: 1.6;">
-                    <strong style="font-size: 1.8rem;">“Lượng”</strong> là những đặc tính có thể đo lường được của sự vật, như kích thước (to/nhỏ), số lượng (nhiều/ít), trình độ (cao/thấp), nhịp độ và tốc độ vận động (nhanh/chậm).
-                </div>
+        .input-group { display: flex; flex-direction: column; gap: 0.8vh; margin-bottom: 2vh; }
+        .label-row { display: flex; justify-content: space-between; align-items: center; }
+        .input-group label { font-weight: 600; font-size: 1.1vw; }
+        .num-input { width: 70px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; text-align: center; font-weight: bold; color: var(--marx-red); font-size: 1.1vw; }
+
+        .results-box {
+            background-color: #fff;
+            padding: 2.5vh;
+            border: 2px dashed var(--marx-blue);
+            border-radius: 12px;
+            margin: 2.5vh 0;
+        }
+
+        .result-item { display: flex; justify-content: space-between; margin: 0.8vh 0; font-size: 1.3vw; }
+        .highlight { font-weight: bold; color: var(--marx-red); }
+        .formula-box { margin-top: 1.5vh; padding-top: 1.5vh; border-top: 1px solid #eee; text-align: center; font-style: italic; font-weight: bold; font-size: 1.1vw; }
+
+        .bar-chart { display: flex; height: 50px; width: 100%; border-radius: 10px; overflow: hidden; background-color: #eee; margin-top: 2vh; }
+        .bar-v { background-color: var(--marx-blue); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: width 0.3s ease; font-size: 1vw; }
+        .bar-m { background-color: var(--marx-red); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: width 0.3s ease; font-size: 1vw; }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/red.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: white; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 8vw;">
+        
+        <!-- Centered Title (Thống nhất phông chữ) -->
+        <div style="text-align: center; margin-bottom: 5vh; margin-top: -6vh; width: 100%;">
+            <div style="font-family: 'Perandory', serif; font-size: 4.5vw; letter-spacing: 0.2vw; color: white;">
+                NGUỒN GỐC THẶNG DƯ
             </div>
         </div>
 
-        <div class="source-citation" style="text-align: center; width: 100%; right: 0; bottom: 8vh;">
-            (Phạm Văn Đức, 2019, tr. 127-128)
-        </div>
+        <div style="display: flex; width: 100%; align-items: center; gap: 4vw;">
+            <!-- Left Side: Theory -->
+            <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 1.4vw; line-height: 1.6; display: flex; flex-direction: column; gap: 2.5vh;">
+                    <p style="margin: 0;">Giá trị thặng dư (m) là bản chất được tạo ra trong sản xuất dưới dạng tiền:</p>
+                    <div style="font-size: 2vw; font-weight: 700; color: #ffd700; text-align: center; margin: 1vh 0; font-family: 'Perandory', serif;">
+                        T' = T + t (t > 0)
+                    </div>
+                    
+                    <div style="font-size: 1.1vw; background: rgba(0,0,0,0.3); padding: 2vh; border-radius: 10px; border-left: 4px solid #ffd700; line-height: 1.4;">
+                        <div>• <b>T'</b>: Tổng thu nhập sau chu kỳ.</div>
+                        <div>• <b>T</b>: Số vốn đầu tư ban đầu.</div>
+                        <div>• <b>t</b>: Biểu hiện tiền của thặng dư.</div>
+                    </div>
 
+                    <p style="margin: 0; font-style: italic; opacity: 0.9; font-size: 1.2vw;">Hay nói cách khác thặng dư là giá trị mới do lao động tạo ra nhưng không được trả công.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Detailed Simulator (Enlarged) -->
+            <div style="flex: 1.1; display: flex; justify-content: center; align-items: center;">
+                <div class="marx-simulator">
+                    <h3>Mô phỏng Giá trị Thặng dư</h3>
+                    
+                    <div class="control-panel">
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label>Vốn đầu tư (T):</label>
+                                <input type="number" id="num-v" class="num-input" value="100">
+                            </div>
+                            <input type="range" id="range-v" min="10" max="500" value="100" step="10">
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label>Giá trị lao động (T'):</label>
+                                <input type="number" id="num-total" class="num-input" value="200">
+                            </div>
+                            <input type="range" id="range-total" min="10" max="1000" value="200" step="10">
+                        </div>
+                    </div>
+
+                    <div class="results-box">
+                        <div class="result-item">
+                            <span>Giá trị Thặng dư (m):</span>
+                            <span class="highlight" id="out-m">100</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Tỷ suất Thặng dư (m'):</span>
+                            <span class="highlight" id="out-rate">100%</span>
+                        </div>
+                        <div class="formula-box">
+                            <span id="out-formula">200 (T') = 100 (T) + 100 (t)</span>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div style="text-align: center; font-weight: bold; margin-bottom: 8px; color: #555; font-size: 1vw;">CẤU TRÚC GIÁ TRỊ HÀNG HÓA</div>
+                        <div class="bar-chart">
+                            <div class="bar-v" id="bar-v" style="width: 50%;">T (100)</div>
+                            <div class="bar-m" id="bar-m" style="width: 50%;">m (100)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Entrance Animation
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const items = document.querySelectorAll('.comparison-item');
-                items.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('animate');
-                    }, index * 400);
-                });
-            }, 300);
+        const rangeV = document.getElementById('range-v'); const numV = document.getElementById('num-v');
+        const rangeTotal = document.getElementById('range-total'); const numTotal = document.getElementById('num-total');
+        const outM = document.getElementById('out-m'); const outRate = document.getElementById('out-rate'); const outFormula = document.getElementById('out-formula');
+        const barV = document.getElementById('bar-v'); const barM = document.getElementById('bar-m');
+
+        function updateValues(source) {
+            if (source === 'rangeV') numV.value = rangeV.value;
+            if (source === 'numV') rangeV.value = numV.value;
+            if (source === 'rangeTotal') numTotal.value = rangeTotal.value;
+            if (source === 'numTotal') rangeTotal.value = numTotal.value;
+            calculate();
+        }
+
+        function calculate() {
+            let v = parseFloat(numV.value) || 0; let total = parseFloat(numTotal.value) || 0;
+            if (total < v) { total = v; numTotal.value = v; rangeTotal.value = v; }
+            let m = total - v;
+            let rate = v > 0 ? ((m / v) * 100).toFixed(0) : 0;
+            outM.textContent = m.toLocaleString();
+            outRate.textContent = rate + "%";
+            outFormula.textContent = `${total.toLocaleString()} (T') = ${v.toLocaleString()} (T) + ${m.toLocaleString()} (t)`;
+            let percentV = total > 0 ? (v / total) * 100 : 0;
+            let percentM = total > 0 ? (m / total) * 100 : 0;
+            barV.style.width = percentV + "%"; barV.textContent = percentV > 15 ? `T(${v})` : '';
+            barM.style.width = percentM + "%"; barM.textContent = percentM > 15 ? `m (${m})` : '';
+        }
+
+        rangeV.addEventListener('input', () => updateValues('rangeV'));
+        numV.addEventListener('input', () => updateValues('numV'));
+        rangeTotal.addEventListener('input', () => updateValues('rangeTotal'));
+        numTotal.addEventListener('input', () => updateValues('numTotal'));
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('Content01_1.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('Content01_3.html');
         });
 
-        // Navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                window.location.href = 'Content01_1.html';
-            } else if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.location.href = 'Content01_3.html';
-            }
-        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => { document.body.classList.add('page-enter'); calculate(); });
     </script>
 </body>
 </html>

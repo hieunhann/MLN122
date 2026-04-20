@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1.21 - Q&A</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body style="background: url('../../BackgroundPNG/red.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: white; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; width: 100vw; height: 100vh; align-items: center; justify-content: center; text-align: center;">
+        
+        <div style="position: relative;">
+            <div style="font-family: 'Perandory', serif; font-size: 15vw; color: white; opacity: 1;">
+                Q & A
+            </div>
+            <div style="font-size: 2vw; background: white; color: #8b0000; display: inline-block; padding: 5px 30px; border-radius: 5px; margin-top: -3vh; position: relative; z-index: 2; font-weight: bold; text-transform: uppercase;">
+                Hỏi & Đáp
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('Content01_20.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('../Slide1.html');
+        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
+    </script>
+</body>
+</html>
