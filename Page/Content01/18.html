@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 18</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .ai-list {
+            list-style: none;
+            padding: 0;
+            max-width: 900px;
+        }
+        .ai-list li {
+            font-size: 1.4vw;
+            line-height: 1.6;
+            margin-bottom: 2vh;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/red.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: white; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: flex-end; justify-content: center; padding: 0 10vw; box-sizing: border-box;">
+        
+        <!-- Header -->
+        <div style="text-align: right; margin-bottom: 6vh; width: 100%;">
+            <div style="font-family: 'Perandory', serif; font-size: 4.5vw; letter-spacing: 0.2vw;">
+                AI USAGE
+            </div>
+            <div style="width: 250px; height: 3px; background: white; margin: 1.5vh 0 0 auto; opacity: 0.8;"></div>
+        </div>
+
+        <!-- Danh sách công cụ AI -->
+        <ul class="ai-list" style="text-align: right; width: 100%; list-style: none; padding: 0;">
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>NotebookLM</b> và <b>Gemini</b> để tạo hình ảnh.</li>
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>NotebookLM</b> để truy xuất dữ liệu được cung cấp để tạo ra các câu trả lời.</li>
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>NotebookLM</b> để tạo Mindmap cho thông tin cụ thể.</li>
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>NotebookLM</b> để trích nguồn đúng Harvard style và đúng số trang.</li>
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>Gemini</b> để tìm kiếm thông tin về các NĐ/TCTK.</li>
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>Gemini</b> để hỗ trợ quá trình làm website.</li>
+            <li style="font-size: 1.4vw; line-height: 1.6; margin-bottom: 2vh;">Sử dụng <b>ChatGPT</b> để giải thích lý thuyết về thặng dư.</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('17.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('19.html');
+        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
+    </script>
+<script src="../../assets/sidebar.js"></script></body>
+</html>

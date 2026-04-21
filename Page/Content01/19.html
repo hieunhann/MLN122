@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 19</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .ref-list {
+            list-style: none;
+            padding: 0;
+            max-width: 1000px;
+        }
+        .ref-list li {
+            font-size: 1.15vw;
+            line-height: 1.5;
+            margin-bottom: 3vh;
+            text-align: center;
+            position: relative;
+        }
+        .ref-list a {
+            color: #ccc;
+            text-decoration: underline;
+            word-break: break-all;
+            font-size: 0.9vw;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body style="background: url('../../BackgroundPNG/red.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: white; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; align-items: flex-end; justify-content: center; padding: 0 8vw; box-sizing: border-box;">
+        
+        <!-- Header -->
+        <div style="text-align: right; margin-bottom: 5vh; width: 100%;">
+            <div style="font-family: 'Perandory', serif; font-size: 4.5vw; letter-spacing: 0.2vw;">
+                TRÍCH DẪN
+            </div>
+            <div style="width: 250px; height: 3px; background: white; margin: 1.5vh 0 0 auto; opacity: 0.8;"></div>
+        </div>
+
+        <ul class="ref-list" style="text-align: right; width: 100%;">
+            <li style="font-size: 1.6vw;">Ngọc Bích (2025). <i>Góc nhìn về lý thuyết tha hóa lao động của C.Mác trong thời đại kinh tế số.</i> Truy cập tại: <br><a href="https://www.quanlynhanuoc.vn/2025/04/18/goc-nhin-ve-ly-thuyet-tha-hoa-lao-dong-cua-c-mac-trong-thoi-dai-kin_te-so/" target="_blank" style="font-size: 1.2vw;">https://www.quanlynhanuoc.vn/2025/04/18/...</a></li>
+            <li style="font-size: 1.6vw;">Minh Hương (2022). <i>Kiệt sức làm thêm vẫn không đủ sống...</i> Truy cập tại: <br><a href="https://laodong.vn/cong-doan/kiet-suc-lam-them-van-khong-du-song-1056847.ldo" target="_blank" style="font-size: 1.2vw;">https://laodong.vn/cong-doan/kiet-suc-lam-them-van-khong-du-song-1056847.ldo</a></li>
+            <li style="font-size: 1.6vw;">Tấn Lộc (2025). <i>Chưa 25 tuổi đã bị 'hố nợ' 500 triệu đồng nuốt chửng.</i> Truy cập tại: <br><a href="https://vnexpress.net/no-tin-dung-den-ngap-dau-vi-vay-tien-de-mua-sam-4857524.html" target="_blank" style="font-size: 1.2vw;">https://vnexpress.net/no-tin-dung-den-ngap-dau-vi-vay-tien-de-mua-sam-4857524.html</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') window.transitionToPage('18.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('20.html');
+        });
+        window.transitionToPage = function(href) {
+            document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
+            setTimeout(() => { window.location.href = href; }, 450); 
+        };
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
+    </script>
+<script src="../../assets/sidebar.js"></script></body>
+</html>

@@ -3,80 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 1</title>
+    <title>Slide 1 - Nội dung chính</title>
     <link rel="stylesheet" href="../style.css">
-</head>
-<body style="background: url('../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000;">
-    <div style="display: flex; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 10vw;">
+    <style>
+        @font-face {
+            font-family: 'Perandory';
+            src: url('../../assets/fonts/Perandory.otf'); /* Đảm bảo đường dẫn đúng */
+        }
         
-        <!-- Left Title: Nội Dung (Thống nhất phông chữ) -->
-        <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding-right: 8vw;">
-            <div style="font-family: 'Perandory', serif; font-size: 8rem; color: #8b0000; letter-spacing: 0.5rem; text-align: right; line-height: 1.1;">
-                NỘI<br>DUNG
+        .menu-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10vw;
+            background: url('../BackgroundPNG/white.png') center/cover no-repeat;
+        }
+
+        /* Left Side: Artistic "Nội Dung" */
+        .title-side {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .art-text {
+            font-size: 8vw;
+            color: #8b0000;
+            line-height: 0.9;
+            text-align: center;
+            position: relative;
+        }
+        /* Phông chữ nghệ thuật cho chữ cái đầu */
+        .script-char {
+            font-family: 'Edwardian Script ITC', 'Dancing Script', cursive;
+            font-size: 15vw;
+            font-weight: normal;
+            position: absolute;
+        }
+        .n-char { top: -6vw; left: -8vw; }
+        .d-char { top: 4vw; left: -2vw; }
+        
+        .main-text {
+            font-family: 'Perandory', serif;
+            letter-spacing: 0.5vw;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Right Side: Clean Menu List */
+        .list-side {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            padding-left: 5vw;
+        }
+        .menu-item {
+            display: block;
+            text-decoration: none;
+            color: #8b0000;
+            font-family: 'Perandory', serif;
+            font-size: 1.8vw;
+            text-transform: uppercase;
+            padding: 1.5vh 0;
+            border-bottom: 2px solid rgba(139, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            letter-spacing: 0.1vw;
+        }
+        .menu-item:hover {
+            color: #d4af37;
+            padding-left: 20px;
+            border-bottom-color: #d4af37;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; overflow: hidden;">
+    <div class="menu-container">
+        
+        <!-- Left Title: Artistic Content -->
+        <div class="title-side">
+            <div class="art-text">
+                <span class="script-char n-char">N</span>
+                <div class="main-text">ỘI</div>
+                <br>
+                <span class="script-char d-char">D</span>
+                <div class="main-text" style="margin-left: 8vw;">UNG</div>
             </div>
         </div>
 
-        <!-- Right Menu: List -->
-        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding-left: 2vw; border-left: 1px solid rgba(139, 0, 0, 0.1);">
-            <div style="width: 100%; max-width: 500px; font-family: 'Perandory', 'Times New Roman', serif;">
-                
-                <!-- Section Header -->
-                <div style="font-size: 1.5rem; margin-bottom: 15px; letter-spacing: 2px; color: #8b0000; font-weight: bold;">I. GIÁ TRỊ THẶNG DƯ</div>
-                <div style="height: 2px; background: #8b0000; width: 100%; margin-bottom: 10px; opacity: 0.8;"></div>
-
-                <!-- Menu Items: 13 Slides of Content01 -->
-                <style>
-                    .menu-container {
-                        max-height: 55vh;
-                        overflow-y: auto;
-                        padding-right: 10px;
-                    }
-                    .menu-container::-webkit-scrollbar { width: 4px; }
-                    .menu-container::-webkit-scrollbar-thumb { background: #8b0000; border-radius: 10px; }
-                    
-                    .menu-row {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        text-decoration: none;
-                        color: #8b0000;
-                        font-size: 1.2rem;
-                        padding: 10px 0;
-                        border-bottom: 1px solid rgba(139, 0, 0, 0.2);
-                        transition: all 0.2s;
-                        font-weight: 500;
-                    }
-                    .menu-row:hover { 
-                        padding-left: 10px;
-                        background: rgba(139, 0, 0, 0.05);
-                    }
-                    .page-num { font-size: 1rem; opacity: 0.6; font-family: 'Open Sauce', sans-serif; }
-                </style>
-
-                <div class="menu-container">
-                    <a href="Content01/Content01_1.html" class="menu-row"><span>1.1 NGUỒN GỐC TƯ BẢN</span><span class="page-num">01</span></a>
-                    <a href="Content01/Content01_2.html" class="menu-row"><span>1.2 NGUỒN GỐC THẶNG DƯ</span><span class="page-num">02</span></a>
-                    <a href="Content01/Content01_3.html" class="menu-row"><span>1.3 CÁCH THỨC SẢN XUẤT</span><span class="page-num">03</span></a>
-                    <a href="Content01/Content01_4.html" class="menu-row"><span>1.4 QUÁ TRÌNH SẢN XUẤT</span><span class="page-num">04</span></a>
-                    <a href="Content01/Content01_5.html" class="menu-row"><span>1.5 VÍ DỤ MINH HỌA</span><span class="page-num">05</span></a>
-                    <a href="Content01/Content01_6.html" class="menu-row"><span>1.6 BẢN CHẤT GIÁ TRỊ THẶNG DƯ</span><span class="page-num">06</span></a>
-                    <a href="Content01/Content01_7.html" class="menu-row"><span>1.7 PHƯƠNG PHÁP BIẾN ĐỔI</span><span class="page-num">07</span></a>
-                    <a href="Content01/Content01_8.html" class="menu-row"><span>1.8 VÍ DỤ: TUYỆT ĐỐI</span><span class="page-num">08</span></a>
-                    <a href="Content01/Content01_9.html" class="menu-row"><span>1.9 VÍ DỤ: TƯƠNG ĐỐI</span><span class="page-num">09</span></a>
-                    <a href="Content01/Content01_10.html" class="menu-row"><span>1.10 THẶNG DƯ SIÊU NGẠCH</span><span class="page-num">10</span></a>
-                    <a href="Content01/Content01_11.html" class="menu-row"><span>1.11 BÁI VẬT GIÁO</span><span class="page-num">11</span></a>
-                    <a href="Content01/Content01_12.html" class="menu-row"><span>1.12 KHÁI NIỆM BÁI VẬT GIÁO</span><span class="page-num">12</span></a>
-                    <a href="Content01/Content01_13.html" class="menu-row"><span>1.13 GIẢI THÍCH CHI TIẾT</span><span class="page-num">13</span></a>
-                    <a href="Content01/Content01_14.html" class="menu-row"><span>1.14 LIÊN HỆ THỰC TIỄN VN</span><span class="page-num">14</span></a>
-                    <a href="Content01/Content01_15.html" class="menu-row"><span>1.15 THA HÓA LAO ĐỘNG</span><span class="page-num">15</span></a>
-                    <a href="Content01/Content01_16.html" class="menu-row"><span>1.16 KHÁI NIỆM THA HÓA</span><span class="page-num">16</span></a>
-                    <a href="Content01/Content01_17.html" class="menu-row"><span>1.17 THỰC TIỄN THA HÓA VN</span><span class="page-num">17</span></a>
-                    <a href="Content01/Content01_18.html" class="menu-row"><span>1.18 AI USAGE</span><span class="page-num">18</span></a>
-                    <a href="Content01/Content01_19.html" class="menu-row"><span>1.19 TRÍCH DẪN NGUỒN</span><span class="page-num">19</span></a>
-                    <a href="Content01/Content01_20.html" class="menu-row"><span>1.20 THANK YOU</span><span class="page-num">20</span></a>
-                    <a href="Content01/Content01_21.html" class="menu-row"><span>1.21 Q & A SESSION</span><span class="page-num">21</span></a>
-                </div>
-            </div>
+        <!-- Right Menu: Grouped items -->
+        <div class="list-side">
+            <a href="Content01/1.html" class="menu-item">NGUỒN GỐC TƯ BẢN</a>
+            <a href="Content01/3.html" class="menu-item">CÁCH THỨC SẢN XUẤT GIÁ TRỊ THẶNG DƯ</a>
+            <a href="Content01/6.html" class="menu-item">BẢN CHẤT GIÁ TRỊ THẶNG DƯ</a>
+            <a href="Content01/7.html" class="menu-item">PHƯƠNG PHÁP SẢN XUẤT</a>
+            <a href="Content01/11.html" class="menu-item">“BÁI VẬT GIÁO HÀNG HÓA”</a>
+            <a href="Content01/15.html" class="menu-item">“THA HÓA LAO ĐỘNG”</a>
+            <a href="Content01/18.html" class="menu-item">TỔNG KẾT</a>
         </div>
 
     </div>
@@ -85,28 +111,21 @@
     <script>
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.transitionToPage('Content01/Content01_1.html');
+                window.transitionToPage('Content01/1.html');
             } else if (e.key === 'ArrowLeft') {
                 window.transitionToPage('Slide0_5.html');
             }
         });
-    </script>
 
-    <!-- Transition System -->
-    <script>
         window.transitionToPage = function(href) {
             document.body.classList.remove('page-enter');
             document.body.classList.add('page-exit');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 450); 
+            setTimeout(() => { window.location.href = href; }, 450); 
         };
         
         document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('page-enter');
-            let overlays = document.querySelectorAll('.swipe-overlay');
-            overlays.forEach(o => o.remove());
         });
     </script>
-</body>
+    <script src="../assets/sidebar.js"></script></body>
 </html>

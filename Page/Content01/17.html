@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 1.17 - Thực tiễn Việt Nam</title>
+    <title>Slide 17</title>
     <link rel="stylesheet" href="../../style.css">
     <style>
         .layout-container {
@@ -83,8 +83,8 @@
 
     <script>
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') window.transitionToPage('Content01_16.html');
-            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('Content01_18.html');
+            if (e.key === 'ArrowLeft') window.transitionToPage('16.html');
+            else if (e.key === 'ArrowRight' || e.key === ' ') window.transitionToPage('18.html');
         });
         window.transitionToPage = function(href) {
             document.body.classList.remove('page-enter'); document.body.classList.add('page-exit');
@@ -92,5 +92,5 @@
         };
         document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-enter'));
     </script>
-</body>
+<script src="../../assets/sidebar.js"></script></body>
 </html>
