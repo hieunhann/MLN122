@@ -8,60 +8,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body style="background: url('../../BackgroundPNG/white.png') center/cover no-repeat; margin: 0; padding: 0; overflow: hidden; color: #8b0000; font-family: 'Open Sauce', 'Montserrat', sans-serif;">
-    <div style="display: flex; width: 100vw; height: 100vh; align-items: center; justify-content: center; padding: 0 8vw; gap: 5vw;">
+    <div style="display: flex; flex-direction: column; width: 100vw; height: 100vh; padding: 6vh 8vw; box-sizing: border-box;">
         
-        <!-- Left Side: Text Content -->
-        <div style="flex: 1.3; display: flex; flex-direction: column; justify-content: center; text-align: left;">
-            <!-- Title (Thống nhất phông chữ) -->
-            <div style="margin-bottom: 5vh; text-align: left;">
-                <div style="font-family: 'Perandory', serif; font-size: 5vw; letter-spacing: 0.15vw; line-height: 1.1;">
-                    NGUỒN GỐC<br>TƯ BẢN
-                </div>
+        <!-- Center Title -->
+        <div style="text-align: center; margin-bottom: 6vh;">
+            <div style="font-family: 'Perandory', serif; font-size: 5vw; letter-spacing: 0.15vw; color: #8b0000; line-height: 1;">
+                NGUỒN GỐC TƯ BẢN
             </div>
-
-            <!-- Paragraphs -->
-            <div style="font-size: 1.3vw; line-height: 1.6; display: flex; flex-direction: column; gap: 2.5vh; max-width: 95%;">
-                <p style="margin: 0;">Theo học thuyết của C.Mác, tiền sẽ biến thành tư bản khi nó được sử dụng để mang lại giá trị thặng dư (Ngô Tuấn Nghĩa 2019, tr. 54)</p>
-                <p style="margin: 0;">Tiền trong nền sản xuất hàng hóa giản đơn vận động trong quan hệ H - T - H.</p>
-                <p style="margin: 0;">Ngược lại, nền sản xuất tư bản chủ nghĩa theo công thức T-H-T nhưng tư bản là T-H-T' với mục đích không phải để tiêu dùng, mà để kiếm thêm tiền</p>
-                
-                <div style="margin-top: 2vh; font-weight: 700; display: inline-block;">
-                    <span style="border-bottom: 2px solid #8b0000; padding-bottom: 5px;">Vậy nguồn gốc của giá trị thặng dư là gì?</span>
-                </div>
-            </div>
+            <div style="width: 200px; height: 3px; background: #8b0000; margin: 2vh auto 0; opacity: 0.6;"></div>
         </div>
 
-        <!-- Right Side: Illustrative Cards -->
-        <div style="flex: 1; display: flex; flex-direction: column; gap: 4vh; justify-content: center;">
-            <!-- Card 1 -->
-            <div style="background: white; border: 1px solid #2e7d32; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-                <div style="background: #2e7d32; color: white; padding: 1.2vh; text-align: center; font-weight: 700; font-size: 1.1vw;">
-                    NỀN SẢN XUẤT HÀNG HÓA GIẢN ĐƠN (H-T-H)
-                </div>
-                <div style="padding: 2.5vh; text-align: center;">
-                    <div style="font-size: 1.4vw; font-weight: 700; color: #333;">HÀNG - TIỀN - HÀNG</div>
-                    <div style="margin-top: 1.5vh; background: #e8f5e9; padding: 1vh 1.5vh; font-size: 0.9vw; border-radius: 5px; color: #2e7d32; font-weight: 600;">
-                        MỤC ĐÍCH: GIÁ TRỊ SỬ DỤNG (TIÊU DÙNG)
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div style="background: white; border: 1px solid #c62828; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-                <div style="background: #c62828; color: white; padding: 1.2vh; text-align: center; font-weight: 700; font-size: 1.1vw;">
-                    NỀN SẢN XUẤT TƯ BẢN CHỦ NGHĨA (T-H-T')
-                </div>
-                <div style="padding: 2.5vh; text-align: center;">
-                    <div style="font-size: 1.4vw; font-weight: 700; color: #333;">TIỀN - HÀNG - TIỀN'</div>
-                    <div style="margin-top: 1.5vh; background: #ffebee; padding: 1vh 1.5vh; font-size: 0.9vw; border-radius: 5px; color: #c62828; font-weight: 600;">
-                        MỤC ĐÍCH: GIÁ TRỊ TĂNG THÊM (KIẾM THÊM TIỀN)
-                    </div>
-                </div>
-            </div>
+        <!-- Main Content (Balanced Row) -->
+        <div style="display: flex; flex: 1; align-items: center; gap: 5vw;">
             
-            <div style="font-style: italic; opacity: 0.5; font-size: 0.85vw; text-align: right; margin-top: -1vh;" class="citation">(Mô phỏng sơ đồ phân tích kinh tế)</div>
-        </div>
+            <!-- Left Side: Conceptual Framework -->
+            <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 1.4vw; line-height: 1.7; color: #333; text-align: justify;">
+                    <p style="margin-bottom: 3vh;">Theo học thuyết của <b>C.Mác</b>, tiền sẽ biến thành tư bản khi nó được 
+                    sử dụng để mang lại <span style="color: #8b0000; font-weight: bold;">giá trị thặng dư</span>.</p>
+                    
+                    <div style="background: rgba(139, 0, 0, 0.05); padding: 2.5vh 2vw; border-left: 5px solid #8b0000; border-radius: 5px; font-style: italic; margin-bottom: 4vh;">
+                        "Tiền chỉ trở thành tư bản trong những điều kiện nhất định, khi sức lao động đã trở thành hàng hóa."
+                    </div>
 
+                    <div style="font-family: 'Perandory', serif; font-size: 2vw; color: #8b0000; border-bottom: 2px dashed rgba(139, 0, 0, 0.3); display: inline-block; padding-bottom: 5px;">
+                        Vậy nguồn gốc của giá trị thặng dư là gì?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Visual Comparison Cards -->
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 3vh; justify-content: center;">
+                
+                <!-- Simple Commodity Production -->
+                <div style="background: white; border-radius: 12px; padding: 2.5vh; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid rgba(139, 0, 0, 0.1); position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; background: #666; color: white; padding: 4px 12px; font-size: 0.75vw; font-weight: bold; border-bottom-right-radius: 8px;">GIẢN ĐƠN</div>
+                    <div style="text-align: center; margin-top: 1.5vh;">
+                        <div style="font-family: 'Perandory', serif; font-size: 3.5vw; color: #d4af37; letter-spacing: 0.4vw;">H - T - H</div>
+                        <div style="font-size: 1.1vw; text-transform: uppercase; color: #666; margin-top: 0.5vh;">Mục đích: Giá trị sử dụng</div>
+                    </div>
+                </div>
+
+                <!-- Capitalist Production -->
+                <div style="background: white; border-radius: 12px; padding: 2.5vh; box-shadow: 0 15px 40px rgba(139, 0, 0, 0.15); border: 2px solid #8b0000; position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; background: #8b0000; color: white; padding: 4px 12px; font-size: 0.75vw; font-weight: bold; border-bottom-right-radius: 8px;">TƯ BẢN</div>
+                    <div style="text-align: center; margin-top: 1.5vh;">
+                        <div style="font-family: 'Perandory', serif; font-size: 3.5vw; color: #8b0000; letter-spacing: 0.4vw;">T - H - T'</div>
+                        <div style="font-size: 1.1vw; text-transform: uppercase; color: #8b0000; font-weight: bold; margin-top: 0.5vh;">Mục đích: Giá trị tăng thêm</div>
+                    </div>
+                </div>
+
+                <div class="citation" style="text-align: right; margin-top: 0vh;">(Ngô Tuấn Nghĩa 2019, tr. 54)</div>
+            </div>
+        </div>
     </div>
 
     <script>
