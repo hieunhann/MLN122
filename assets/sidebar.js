@@ -61,7 +61,12 @@
             width: 100% !important; padding: 5px 0 !important; text-decoration: none !important;
         `;
         
-        const isActive = item.pages.some(p => currentPath.includes(p));
+        // Check if current menu item is active
+        const isActive = item.pages.some(p => {
+            // So sánh chính xác số trang ở cuối URL (ví dụ: /1.html hoặc /1)
+            const regex = new RegExp(`${p}(\\.|$)`);
+            return regex.test(window.location.pathname);
+        });
 
         a.innerHTML = `
             <div class="side-circle" style="

@@ -8,7 +8,7 @@
     <style>
         @font-face {
             font-family: 'Perandory';
-            src: url('../../assets/fonts/Perandory.otf'); /* Đảm bảo đường dẫn đúng */
+            src: url('../assets/fonts/Perandory.otf'); 
         }
         
         .menu-container {
@@ -19,6 +19,7 @@
             justify-content: center;
             padding: 0 10vw;
             background: url('../BackgroundPNG/white.png') center/cover no-repeat;
+            font-family: 'Perandory', serif;
         }
 
         /* Left Side: Artistic "Nội Dung" */
@@ -47,31 +48,33 @@
         .d-char { top: 4vw; left: -2vw; }
         
         .main-text {
-            font-family: 'Perandory', serif;
-            letter-spacing: 0.5vw;
-            position: relative;
-            z-index: 2;
+            font-family: 'Perandory', serif !important;
+            font-size: 8vw;
+            color: #8b0000;
+            line-height: 0.8;
+            font-weight: bold;
         }
-
+        
         /* Right Side: Clean Menu List */
         .list-side {
             flex: 1.2;
             display: flex;
             flex-direction: column;
-            gap: 2vh;
+            gap: 1.5vh;
             padding-left: 5vw;
         }
         .menu-item {
             display: block;
             text-decoration: none;
             color: #8b0000;
-            font-family: 'Perandory', serif;
-            font-size: 1.8vw;
+            font-family: 'Perandory', serif !important;
+            font-size: 1.9vw;
             text-transform: uppercase;
-            padding: 1.5vh 0;
+            padding: 1.2vh 0;
             border-bottom: 2px solid rgba(139, 0, 0, 0.4);
             transition: all 0.3s ease;
-            letter-spacing: 0.1vw;
+            letter-spacing: 0.05vw;
+            font-weight: bold;
         }
         .menu-item:hover {
             color: #d4af37;
